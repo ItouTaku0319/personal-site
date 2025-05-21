@@ -4,10 +4,21 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <header style={styles.header}>
-        <h1>伊東拓</h1>
-        <p>23歳｜将来はサイドFIREを目指すエンジニア志望</p>
-      </header>
+<header style={styles.header}>
+  <div style={styles.headerInnerCenter}>
+    <img
+      src={`${process.env.PUBLIC_URL}/logo_itu_header.png`}
+      alt="ロゴ"
+      style={styles.logo}
+    />
+    <h1 style={{ margin: 0 }}>伊東拓</h1>
+  </div>
+  <p style={{ textAlign: "center", marginTop: "0.5rem" }}>
+    23歳｜将来はサイドFIREを目指すエンジニア志望
+  </p>
+</header>
+
+
 
       <main style={styles.main}>
         <section>
@@ -25,6 +36,15 @@ function App() {
             <li>JavaScript（学習中）</li>
             <li>React（ポートフォリオ制作中）</li>
             <li>Go（バックエンド勉強中）</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style={styles.heading}>趣味</h2>
+          <ul>
+            <li>野球観戦(阪神タイガース)</li>
+            <li>読書</li>
+            <li>ジム</li>
           </ul>
         </section>
 
@@ -57,12 +77,24 @@ function App() {
 }
 
 const styles = {
-  header: {
-    backgroundColor: "#4CAF50",
-    color: "white",
-    padding: "2rem 1rem",
-    textAlign: "center",
-  },
+header: {
+  backgroundColor: "#4CAF50",
+  color: "white",
+  padding: "1.5rem 2rem",
+},
+headerInnerCenter: {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "0.5rem",
+},
+
+logo: {
+  width: "48px",
+  height: "48px",
+  objectFit: "contain",
+},
+
   main: {
     padding: "2rem",
     maxWidth: "800px",
